@@ -1,0 +1,299 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0-beta3/css/all.min.css">
+
+    <style>
+        .main1 {
+            padding-bottom: 75px;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+
+        .heading {
+            text-align: center;
+            /* color: red; */
+        }
+
+        .cards {
+            display: flex;
+            margin-top: 45px;
+        }
+
+        .infoContent {
+            width: 40%;
+            padding: 20px;
+            padding-left: 60px;
+        }
+
+        .infoContent h4 {
+            color: red;
+
+            text-align: center;
+        }
+
+        .infoIconText {
+            display: flex;
+            padding-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .infoText {
+            padding-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .iconTextcard {
+            padding-top: 50px;
+        }
+
+        .infoIcon {
+            color: red;
+            padding-right: 20px;
+        }
+
+        .infoImage {
+            width: 60%;
+            padding: 20px;
+        }
+
+        .Image img {
+            width: 100%;
+            border-radius: 34px;
+        }
+
+        .zoom-image {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .zoom-image:hover {
+            transform: scale(0.9);
+        }
+
+        .line1 {
+            border: 1px solid red;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .infoIconText1 {
+            display: flex;
+            padding-bottom: 12px;
+        }
+
+        .infoContent1 {
+            margin-top: 30px;
+            padding: 20px;
+            padding-top: 60px;
+            padding-left: 60px;
+            padding-right: 60px;
+            background-color: #efefef;
+        }
+
+        .infoContent1 h4 {
+            color: red;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .infoIcon1 {
+            color: red;
+            padding-right: 20px;
+        }
+
+        .infoText1 {
+            padding-bottom: 12px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main1">
+        <div class="heading">
+            <h3>Information About Blood Donation</h3>
+        </div>
+        <div class="cards">
+            <div class="infoContent">
+                <h4>Benefits of Blood Donation</h4>
+                <div class="iconTextcard">
+                    <div class="infoIconText">
+                        <div class="infoIcon">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText">
+                            <p>Reduce Stress</p>
+                        </div>
+                    </div>
+                    <div class="infoIconText">
+                        <div class="infoIcon">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText">
+                            <p>Improve your emotional well-being</p>
+                        </div>
+                    </div>
+                    <div class="infoIconText">
+                        <div class="infoIcon">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText">
+                            <p>Benefit your physical health</p>
+                        </div>
+                    </div>
+                    <div class="infoIconText">
+                        <div class="infoIcon">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText">
+                            <p>Help get rid of negative feelings</p>
+                        </div>
+                    </div>
+                    <div class="infoIconText">
+                        <div class="infoIcon">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText">
+                            <p>Benefit your physical health</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoImage">
+                <div class="Image">
+                    <img src="{% static '/image/blood-donation.jpg' %}" alt="" class="zoom-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="line1"></div>
+
+        <div class="cards">
+            <div class="infoImage">
+                <div class="Image">
+                    <img src="{% static '/image/precautions.png' %}" alt="" class="zoom-image">
+                </div>
+            </div>
+            <div class="infoContent">
+                <h4>Precautions of Blood Donation</h4>
+                <div class="iconTextcard">
+                    <div class="infoIconText">
+                        <div class="infoIcon">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText">
+                            <p>Body must be hydrate</p>
+                        </div>
+                    </div>
+                    <div class="infoIconText">
+                        <div class="infoIcon">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText">
+                            <p>Eat Nutritious Meals</p>
+                        </div>
+                    </div>
+                    <div class="infoIconText">
+                        <div class="infoIcon">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText">
+                            <p>Do not smoke or drink before 24 hrs </p>
+                        </div>
+                    </div>
+                    <div class="infoIconText">
+                        <div class="infoIcon">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText">
+                            <p>Rest After Donation</p>
+                        </div>
+                    </div>
+                    <div class="infoIconText">
+                        <div class="infoIcon">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText">
+                            <p>Weight must be above 50 kgs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="line1"></div>
+
+
+        <div class="cards">
+            <div class="infoContent1">
+                <h4>Eligibility for blood donation</h4>
+                <div class="iconTextcard1">
+                    <div class="infoIconText1">
+                        <div class="infoIcon1">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText1">
+                            <p><b>Age:</b> Typically, donors must be at least 17 years old, although the minimum age
+                                requirement may vary. Some countries and organizations may allow 16-year-olds to donate
+                                with parental consent.</p>
+                        </div>
+                    </div>
+                    <div class="infoIconText1">
+                        <div class="infoIcon1">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText1">
+                            <p><b>Weight:</b> Donors usually need to meet a minimum weight requirement, often around 110
+                                pounds
+                                (50 kg).</p>
+                        </div>
+                    </div>
+                    <div class="infoIconText1">
+                        <div class="infoIcon1">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText1">
+                            <p><b>Health:</b> Donors must be in good general health. You should not have any acute or
+                                chronic
+                                medical conditions that might be a concern for the recipient or the donor's safety.
+                                Common health issues like colds, flu, or minor infections may temporarily disqualify you
+                                from donating.</p>
+                        </div>
+                    </div>
+                    <div class="infoIconText1">
+                        <div class="infoIcon1">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText1">
+                            <p><b>Medications and Medical History:</b> Some medical conditions, medications, or
+                                treatments may
+                                disqualify potential donors. For example, individuals taking specific medications,
+                                having certain medical conditions, or having a history of specific diseases may not be
+                                eligible.</p>
+                        </div>
+                    </div>
+                    <div class="infoIconText1">
+                        <div class="infoIcon1">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div class="infoText1">
+                            <p><b>Tattoos and Piercings:</b> Depending on local regulations, recent tattoos or piercings
+                                may
+                                result in deferral. The waiting period can vary.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+{% extends 'blood/adminbase.html' %}{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    {% block content %}
+    <br><br>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="blood">
+                            <h2>A+ <i class="fas fa-tint"></i></h2>
+                        </div><br><br>
+                        <div>
+                            {{A1.unit}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="blood">
+                            <h2>B+ <i class="fas fa-tint"></i></h2>
+                        </div><br><br>
+                        <div>
+                            {{B1.unit}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="blood">
+                            <h2>O+ <i class="fas fa-tint"></i></h2>
+                        </div><br><br>
+                        <div>
+                            {{O1.unit}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="blood">
+                            <h2>AB+ <i class="fas fa-tint"></i></h2>
+                        </div><br><br>
+                        <div>
+                            {{AB1.unit}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="blood">
+                            <h2>A- <i class="fas fa-tint"></i></h2>
+                        </div><br><br>
+                        <div>
+                            {{A2.unit}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="blood">
+                            <h2>B- <i class="fas fa-tint"></i></h2>
+                        </div><br><br>
+                        <div>
+                            {{B2.unit}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="blood">
+                            <h2>O- <i class="fas fa-tint"></i></h2>
+                        </div><br><br>
+                        <div>
+                            {{O2.unit}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="blood">
+                            <h2>AB- <i class="fas fa-tint"></i></h2>
+                        </div><br><br>
+                        <div>
+                            {{AB2.unit}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="blood">
+                            <i class="fas fa-users"></i>
+                        </div><br>
+                        <div>
+                            Total Donors <br>
+                            {{totaldonors}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="blood">
+                            <i class="fas fa-spinner"></i>
+                        </div><br>
+                        <div>
+                            Total Requests <br>
+                            {{totalrequest}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="blood">
+                            <i class="far fa-check-circle"></i>
+                        </div><br>
+                        <div>
+                            Approved Requests <br>
+                            {{totalapprovedrequest}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <div class="blood">
+                            <i class="fas fa-tint xyz"></i>
+                        </div><br>
+                        <div>
+                            Total Blood Unit (in ml) <br>
+                            {{totalbloodunit}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <form action="" method="get" id="message">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="message">Event:</label>
+                        <input type="text" id="message" name="message" class="message" placeholder="Enter your message">
+                    </div>
+                    <div class="button">
+                        <div class="col-sm-12 text-center">
+                            <button class="btn btn-primary message" style="background-color: #3f99ee; color: #fff;"
+                                id="message">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        Current Event Message: {{test_message}}
+        <script>
+            const messageForm = document.getElementById('messageForm');
+            const sendMessageButton = document.getElementById('sendMessageButton');
+
+            sendMessageButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                messageForm.submit();
+            });
+        </script>
+
+
+
+        {% endblock content %}
+</body>
+
+</html>

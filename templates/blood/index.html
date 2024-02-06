@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Bank</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0-beta3/css/all.min.css">
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main {
+      padding-left: 120px;
+      padding-right: 120px;
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+
+    .topContent {
+      display: flex;
+      padding-bottom: 30px;
+    }
+
+    .contant {
+      width: 50%;
+      text-align: center;
+      padding-top: 170px;
+
+    }
+
+    .contant h5 {
+      color: red;
+    }
+
+    .contant h2 {
+      font-weight: bold;
+    }
+
+    .image {
+      width: 50%;
+    }
+
+    .image img {
+      width: 60%;
+      padding-left: 50px;
+    }
+
+    .container_1 {
+      display: flex;
+      background-color: #efefef;
+      padding: 20px;
+    }
+
+    .image2 {
+      width: 50%;
+    }
+
+    .image2 img {
+      padding-left: 150px;
+    }
+
+    .zoom-image {
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .zoom-image:hover {
+      transform: scale(0.9);
+    }
+
+    .line {
+      height: 63vh;
+      border: 1px solid red;
+    }
+
+    .contant2 {
+      width: 50%;
+    }
+
+    .contant2 h3 {
+      padding-left: 50px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .section {
+      padding-left: 60px;
+    }
+
+    .icontext {
+      display: flex;
+      padding-top: 20px;
+    }
+
+    .icon {
+      color: red;
+      font-size: 30px;
+      padding-right: 20px;
+    }
+
+    .fa-user-plus {
+      font-size: 25px;
+    }
+
+    .text a {
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  {% include "blood/navbar.html" %}
+
+  <div class="main">
+
+    <div class="topContent">
+      <div class="contant">
+        <h5>Donate Blood, save life !</h5>
+        <h2>Donate Blood And <br> Inspire Others.</h2>
+      </div>
+      <div class="image">
+        <img src="{% static 'image/home_image.jpg' %}" alt="" class="zoom-image">
+      </div>
+    </div>
+    <div class="container_1">
+      <div class="image2">
+        <img src="{% static 'image/infographic_1479129887.png' %}" alt="" class="zoom-image">
+      </div>
+
+
+      <div class="line"></div>
+
+      <div class="contant2">
+        <h3>About</h3>
+        <div class="section">
+          <div class="icontext">
+            <div class="icon">
+              <i class="fas fa-tint"></i>
+            </div>
+            <div class="text">
+              <a href="">Being a Donar</a>
+              <p>You can donate blood if you are a donar.</p>
+            </div>
+          </div>
+          <div class="icontext">
+            <div class="icon">
+              <i class="fas fa-tint"></i>
+            </div>
+            <div class="text">
+              <a href="">Patient</a>
+              <p>You can request for blood if you are a patient.</p>
+            </div>
+          </div>
+          <div class="icontext">
+            <div class="icon">
+              <i class="fas fa-tint"></i>
+            </div>
+            <div class="text">
+              <a href="">Blood Group</a>
+              <p>Find any blood group that you need. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "blood/information.html" %}
+
+  {% include "blood/footer.html" %}
+</body>
+
+</html>
